@@ -1,0 +1,33 @@
+<div class="container">
+<div class="row">
+	<div class="col-md-3">
+		<br>	
+       		<ul class="list-group" style="    margin-left: -2%;
+    position: fixed;
+    width: 16%;">
+          		<li class="list-group-item  bg-info" style="margin-bottom: 2px;" *ngFor="let logo of logos;let i=index">      
+          			
+  				<div class="btn btn-block bg-dark" (click)="myMethod($event,i)"><span><img src="{{logo.src}}" style="width: 64px;height: 64px;"></span></div>          
+          		</li>
+          		<hr>
+          		<br>
+         </ul>
+	</div>
+<div class="col-md-9">
+	<div class="container"  *ngIf="this.showComponent[0]">
+		<app-catlist></app-catlist>
+	</div>
+	<div class="container"  *ngIf="this.showComponent[1]">
+		<app-doglist></app-doglist>
+	</div>
+	<div class="container"  *ngIf="this.showComponent[2]">
+		<app-marinelist></app-marinelist>
+	</div>
+	<div class="container"  *ngIf="this.showComponent[3]">
+		<app-essentials></app-essentials>
+	</div>
+</div> 
+
+</div>	
+
+</div>

@@ -1,0 +1,39 @@
+
+<br>
+<br>
+<div class="container">
+  
+  <div class="card bg-dark text-white">
+      <div class="card-header bg-info text-white">
+        <h3>Login <i class="fas fa-sign-in-alt"></i>    </h3>
+      </div>
+      <div class="card-body">
+        <form  (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+     <div class="form-group">
+    <label for="Email">Email address</label>
+    <input ngModel #Email="ngModel" name="email" type="email" class="form-control" placeholder="Enter email" required
+    >
+    <!-- <div *ng-if="Email.errors?.required && Email.touched" class="alert alert-danger">
+      Please Enter Valid Email
+    </div> -->
+  </div>
+  <div class="form-group">
+    <label for="Password">Password</label>
+    <input ngModel #password="ngModel" name="password" type="password" class="form-control"  placeholder="Password" required minlength="6">
+    <!-- <div *ng-if="password.errors?.required && password.touched" class="alert alert-danger">
+      Please Enter the password
+    </div>
+    <div *ng-if="password.errors?.required && password.touched" class="alert alert-danger">
+        Enter the correct Password.
+    </div> -->
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+      <div class="card-footer">
+        New Here?<a routerLink="/signup">  Register</a>
+      </div>
+  </div>
+
+</div>

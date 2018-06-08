@@ -1,0 +1,25 @@
+<br><br>
+<div class="container">
+  <div class="card bg-dark text-white">
+    <div class="card-header bg-info">
+      <h3>Register <i class="fas fa-user-plus"></i></h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit(signinform)" #signinform="ngForm">
+    <div class="form-group">
+      <label for="Email">Email address</label>
+      <input ngModel name="email" type="email" class="form-control" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="Password">Password</label>
+      <input ngModel name="password" type="password" class="form-control"  placeholder="Password">
+    </div>
+    
+    <button type="submit" class="btn btn-success">Sign-in</button>
+  </form>
+    </div>
+    <div class="card-footer">
+      Already a user? <a routerLink="/login">Login</a>
+    </div>
+  </div>
+</div>
